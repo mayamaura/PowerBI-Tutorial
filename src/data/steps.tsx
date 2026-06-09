@@ -1356,7 +1356,7 @@ export const steps: Step[] = [
 
             {/* フィールドペイン説明 */}
             <div>
-              <p className="font-semibold mb-2">② 「フィールド」ペインから各軸にドラッグ</p>
+              <p className="font-semibold mb-2">② 「データ」ペインから各軸にドラッグ</p>
               <p className="text-gray-600 dark:text-gray-400 mb-2 text-xs">視覚化ペインの下に X 軸・Y 軸・凡例などのエリアが表示されます。そこにフィールドをドラッグします。</p>
               <div className="overflow-x-auto">
                 <img
