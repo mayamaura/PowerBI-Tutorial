@@ -296,7 +296,7 @@ export const steps: Step[] = [
               <p className="text-xs text-red-600 dark:text-red-400">なぜ解析ツールで扱いにくいのか</p>
             </div>
             <div className="p-3">
-            <svg viewBox="0 0 635 235" width="100%" xmlns="http://www.w3.org/2000/svg" style={{fontFamily: 'sans-serif'}}>
+            <svg viewBox="0 0 635 185" width="100%" xmlns="http://www.w3.org/2000/svg" style={{fontFamily: 'sans-serif'}}>
               <defs>
                 <marker id="sv-a1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#d97706"/></marker>
                 <marker id="sv-a2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#dc2626"/></marker>
@@ -369,24 +369,18 @@ export const steps: Step[] = [
               <text x="526" y="77" textAnchor="middle" fontSize="10" fill="#991b1b" fontWeight="bold">② 1行に5ヶ月分の値が混在</text>
               <text x="526" y="90" textAnchor="middle" fontSize="9.5" fill="#991b1b">（1行 ≠ 1つの観測値）</text>
 
-              {/* ③ arrow from ghost col down */}
-              <line x1="399" y1="138" x2="399" y2="150" stroke="#9ca3af" strokeWidth="1.5" strokeDasharray="3,2" markerEnd="url(#sv-a3)"/>
-              <rect x="358" y="152" width="249" height="22" fill="#f9fafb" stroke="#9ca3af" strokeWidth="1.5" rx="3"/>
-              <text x="482" y="167" textAnchor="middle" fontSize="10" fill="#4b5563">③ 月が増えるたびに列の追加が必要になる</text>
-
-              {/* ④ horizontal span under row data */}
+              {/* ③ horizontal span under row data */}
               <line x1="102" y1="140" x2="372" y2="140" stroke="#7c3aed" strokeWidth="1.5"/>
               <line x1="102" y1="135" x2="102" y2="145" stroke="#7c3aed" strokeWidth="1.5"/>
               <line x1="372" y1="135" x2="372" y2="145" stroke="#7c3aed" strokeWidth="1.5"/>
               <line x1="237" y1="140" x2="237" y2="150" stroke="#7c3aed" strokeWidth="1.5" markerEnd="url(#sv-a4)"/>
               <rect x="22" y="152" width="280" height="22" fill="#ede9fe" stroke="#7c3aed" strokeWidth="1.5" rx="3"/>
-              <text x="162" y="167" textAnchor="middle" fontSize="10" fill="#4c1d95">④ 集計には全列（全月）を参照する必要がある</text>
+              <text x="162" y="167" textAnchor="middle" fontSize="10" fill="#4c1d95">③ 集計には全列（全月）を参照する必要がある</text>
 
-              {/* Summary box */}
-              <rect x="22" y="182" width="600" height="46" fill="#fff7ed" stroke="#f97316" strokeWidth="1" rx="4"/>
-              <text x="32" y="197" fontSize="10" fontWeight="bold" fill="#c2410c">このサンプルデータは？</text>
-              <text x="32" y="212" fontSize="9.5" fill="#7c2d12">プロジェクト5×タスク6＝30行、月列36ヶ月 → 合計38列のピボット形式。§5でピボット解除して整然データに変換します。</text>
-              <text x="32" y="224" fontSize="9.5" fill="#7c2d12">Power BI はピボット解除後のデータを使ってグラフ・集計を行います。</text>
+              {/* ④ arrow from ghost col down */}
+              <line x1="399" y1="138" x2="399" y2="150" stroke="#9ca3af" strokeWidth="1.5" strokeDasharray="3,2" markerEnd="url(#sv-a3)"/>
+              <rect x="358" y="152" width="249" height="22" fill="#f9fafb" stroke="#9ca3af" strokeWidth="1.5" rx="3"/>
+              <text x="482" y="167" textAnchor="middle" fontSize="10" fill="#4b5563">④ 月が増えるたびに列の追加が必要になる</text>
             </svg>
             </div>
           </div>
@@ -413,23 +407,23 @@ export const steps: Step[] = [
                     </td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1">田中</td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1 bg-orange-100 dark:bg-orange-900/30">
-                      120（先月比+8）<span className="text-orange-600 dark:text-orange-400"> ③</span>
+                      120（先月比+8）<span className="text-orange-600 dark:text-orange-400"> ②</span>
                     </td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1">進行中</td>
                   </tr>
                   <tr>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1">鈴木</td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1 bg-orange-100 dark:bg-orange-900/30">
-                      85（先月比−5）<span className="text-orange-600 dark:text-orange-400"> ③</span>
+                      85（先月比−5）<span className="text-orange-600 dark:text-orange-400"> ②</span>
                     </td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1 bg-orange-100 dark:bg-orange-900/30">
-                      ↑ <span className="text-orange-600 dark:text-orange-400">②</span>
+                      ↑ <span className="text-orange-600 dark:text-orange-400">③</span>
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1">山田</td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1 bg-orange-100 dark:bg-orange-900/30">
-                      200（先月比+15）<span className="text-orange-600 dark:text-orange-400"> ③</span>
+                      200（先月比+15）<span className="text-orange-600 dark:text-orange-400"> ②</span>
                     </td>
                     <td className="border border-red-200 dark:border-red-700 px-2 py-1">完了</td>
                   </tr>
@@ -438,8 +432,8 @@ export const steps: Step[] = [
             </div>
             <ul className="text-xs px-3 pb-3 space-y-1.5 text-red-700 dark:text-red-400">
               <li><span className="font-semibold text-orange-600 dark:text-orange-400">① セルの結合：</span>「営業部」が3行にまたがるため、各行に部署情報が入らず、フィルタや集計ができない</li>
-              <li><span className="font-semibold text-orange-600 dark:text-orange-400">② 「↑」による省略：</span>目で見れば意味が伝わるが、プログラムは前の行の値を引き継がないため「↑」という文字列として読み込まれる</li>
-              <li><span className="font-semibold text-orange-600 dark:text-orange-400">③ セル内の複数情報：</span>「120（先月比+8）」のように数値と注記が混在すると、Power BI などのツールは数値と注記を別々に読み取ることができず、集計やグラフ化でエラーが起きやすい。AI（Copilot・ChatGPT など）はある程度読み取れるが、大量データでは見落としや誤解釈が積み上がるリスクがある</li>
+              <li><span className="font-semibold text-orange-600 dark:text-orange-400">② セル内の複数情報：</span>「120（先月比+8）」のように数値と注記が混在すると、Power BI などのツールは数値と注記を別々に読み取ることができず、集計やグラフ化でエラーが起きやすい。AI（Copilot・ChatGPT など）はある程度読み取れるが、大量データでは見落としや誤解釈が積み上がるリスクがある</li>
+              <li><span className="font-semibold text-orange-600 dark:text-orange-400">③ 「↑」による省略：</span>目で見れば意味が伝わるが、プログラムは前の行の値を引き継がないため「↑」という文字列として読み込まれる</li>
             </ul>
           </div>
 
@@ -471,8 +465,8 @@ export const steps: Step[] = [
             </div>
             <ul className="mt-3 text-xs space-y-1 text-gray-600 dark:text-gray-400">
               <li>✅ <span className="font-semibold">① 結合を解除</span>：各行に「営業部」を明示し、フィルタ・集計が可能になった</li>
-              <li>✅ <span className="font-semibold">② 「↑」を実値に置換</span>：鈴木行のステータスを「進行中」と明示した</li>
-              <li>✅ <span className="font-semibold">③ 列を分離</span>：「120（先月比+8）」を「売上」と「前月比」の2列に分け、各セルが1値になった</li>
+              <li>✅ <span className="font-semibold">② 列を分離</span>：「120（先月比+8）」を「売上」と「前月比」の2列に分け、各セルが1値になった</li>
+              <li>✅ <span className="font-semibold">③ 「↑」を実値に置換</span>：鈴木行のステータスを「進行中」と明示した</li>
             </ul>
           </Accordion>
 
@@ -1091,7 +1085,7 @@ export const steps: Step[] = [
           <div className="flex flex-col md:flex-row items-center gap-3">
             <div className="flex-1 w-full rounded-lg border-2 border-red-200 dark:border-red-700 overflow-hidden">
               <div className="bg-red-50 dark:bg-red-900/20 px-3 py-1.5">
-                <p className="text-xs font-bold text-red-700 dark:text-red-300">変換前（ワイド形式）</p>
+                <p className="text-xs font-bold text-red-700 dark:text-red-300">変換前（ピボット形式）</p>
                 <p className="text-xs text-red-500 dark:text-red-400">日付が列に並んでいる</p>
               </div>
               <div className="p-2 overflow-x-auto">
@@ -1356,7 +1350,7 @@ export const steps: Step[] = [
 
             {/* フィールドペイン説明 */}
             <div>
-              <p className="font-semibold mb-2">② 「データ」ペインから各軸にドラッグ</p>
+              <p className="font-semibold mb-2">② データペインからフィールドペインの各軸にドラッグ</p>
               <p className="text-gray-600 dark:text-gray-400 mb-2 text-xs">視覚化ペインの下に X 軸・Y 軸・凡例などのエリアが表示されます。そこにフィールドをドラッグします。</p>
               <div className="overflow-x-auto">
                 <img
@@ -1375,7 +1369,7 @@ export const steps: Step[] = [
             <ol className="space-y-2 list-decimal list-inside">
               <li>キャンバスの空きスペースをクリック（グラフ以外の場所）</li>
               <li>視覚化ペインから <strong>「テーブル」（📋）</strong> アイコンをクリック</li>
-              <li>フィールドペインから「プロジェクト」「タスク」「年月」「工数」をそれぞれドラッグ</li>
+              <li>データペインからフィールドペインに「プロジェクト」「タスク」「年月」「工数」をそれぞれドラッグ</li>
               <li>テーブルの端をドラッグしてサイズを調整</li>
             </ol>
             <div className="overflow-x-auto">
@@ -1393,7 +1387,7 @@ export const steps: Step[] = [
             <ol className="space-y-2 list-decimal list-inside">
               <li>キャンバスの上部の空きスペースをクリック</li>
               <li>視覚化ペインから <strong>「スライサー」（🔽）</strong> アイコンをクリック</li>
-              <li>フィールドペインから「タスク」をドラッグ</li>
+              <li>データペインからフィールドペインへ「タスク」をドラッグ</li>
               <li>スライサーの項目をクリックして、グラフとテーブルが絞り込まれることを確認</li>
             </ol>
             <div className="overflow-x-auto">
